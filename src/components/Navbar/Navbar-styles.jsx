@@ -1,25 +1,38 @@
 import styled from "@emotion/styled";
+import theme from "../../config";
+
+export const NavContainer = styled(`section`)`
+  position: absolute;
+  width: 100%;
+  text-align: center;
+`;
 
 export const Nav = styled(`header`)`
+  margin: 0 auto;
+  width: 1170px;
   display: flex;
+  padding: 2rem;
   align-items: center;
   justify-content: space-between;
-  padding: 0 8rem;
-  height: 80px;
-  background-color: red;
   color: white;
   font-size: 1.4rem;
   a {
-    margin: 0 2rem;
+    padding: 1rem 3rem;
+    border-radius: 50px;
     color: inherit;
+    transition: 0.5s;
+    :hover {
+      background-color: ${theme.primary};
+    }
   }
   .nav-btn {
+    background-color: ${theme.primary};
     padding: 5px;
     border: none;
     outline: none;
+    font-size: 1.8rem;
     visibility: hidden;
     opacity: 0;
-    font-size: 1.8rem;
   }
   @media (max-width: 1024px) {
     .nav-btn {
@@ -39,7 +52,6 @@ export const Nav = styled(`header`)`
       gap: 1.5rem;
       transition: 1s;
       transform: translateY(-100vh);
-      background-color: red;
     }
     .responsive_nav {
       transform: none;
