@@ -12,7 +12,9 @@ function Navbar() {
   return (
     <NavContainer>
       <Nav>
-        <h2>Africano</h2>
+        <h1>
+          AFRI<span>CANO</span>
+        </h1>
         <nav ref={navRef}>
           <a href="#">Home</a>
           <a href="#">about</a>
